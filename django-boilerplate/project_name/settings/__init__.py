@@ -7,6 +7,9 @@ settings.
 # Import production settings.
 from {{ project_name }}.settings.production import *
 
+# Import application specfic settings.
+from {{ project_name }}.settings.application import *
+
 # Import optional local settings.
 try:
     from {{ project_name }}.settings.local import *
