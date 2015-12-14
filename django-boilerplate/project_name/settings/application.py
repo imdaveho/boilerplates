@@ -4,8 +4,9 @@ Django settings for {{ project_name }} project.
 Include all application specifc configuration here.
 """
 import os
+from {{ project_name }}.settings.production import *
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*",]
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
@@ -26,6 +27,7 @@ MANAGERS = ADMINS + [
 ]
 
 # Application Database Settings:
+import dj_database_url
 DATABASES = {
     "default": dj_database_url.config(default="postgresql://"),
 }

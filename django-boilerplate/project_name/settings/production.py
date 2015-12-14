@@ -1,3 +1,4 @@
+import sys
 from {{ project_name }}.settings.default import *
 
 # Custom Project Structure:
