@@ -10,7 +10,7 @@
   "license": "${license}",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "jspm": "^0.16.19",
+    "jspm": "^0.16.19"
   },
   "dependencies": {}
 }

@@ -15,8 +15,10 @@ parser.add_argument('-l', '--license', nargs="?", const="MIT", default="MIT")
 args = vars(parser.parse_args())
 
 try:
-    filein = open('./package.json', 'r+')
+    filein = open('./template_package.json', 'r')
     source = Template(filein.read())
+    filein.close()
+    filein = open('./package.json', 'w')
     filein.seek(0)
 except IOError:
     print("File does not exist\nCreating new package.json...\n")
